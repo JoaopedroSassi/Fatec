@@ -2,30 +2,28 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-   
-void main(){
+
+int main(){
     setlocale(LC_ALL,"Portuguese");
     
-    int seq = 0;
+    int seq;
     printf("Digite o tamanho da sequencia:");
     scanf("%d", &seq);
 
-    int compr = 0, now = 0, bef = 0, num = 0;
-    for (int i = 1; i <= seq; i++){
-        printf("Digite o %do numero:", i);
+    int bef, compr; 
+    printf("Digite o 1o numero:");
+    scanf("%d", &bef);
+    compr = 1;
+
+    for (int i = 1; i < seq; i++){
+        int num;
+        printf("Digite o %do numero:", i + 1);
         scanf("%d", &num);
         if (num > bef){
             compr++;
-            now = num;
-            bef = now;
-        } else if (num < bef && compr < i) {
-            compr = 0;
-            compr++;
-            now = num;
-            bef = now;
-        }
-        
+            bef = num;
+        } 
     }
-    
-    printf("O maior comprimento foi de %d", compr);
+
+    printf("A maior sequência foi %d", compr);
 }

@@ -32,7 +32,7 @@ Sub jogo()
    opcao = Cint(InputBox("------------Jogo Matemático----------" + vbnewline & _
                         "Digite o resultado da expressão: " & num1 & opera & num2 & "" + vbnewline & _
                         "--------------------------------------" + vbnewline & _
-                        "Pontos atuais: " & pontos & "", "Aviso"))   
+                        "Pontos atuais: " & pontos & "", "Aviso"))
    If (opcao = result) Then
       pontos = pontos + 1
       msgbox("Parabéns, você acertou!" + vbnewline & _
@@ -49,3 +49,4 @@ Sub jogo()
       End If
    End If
 End Sub ' jogo
+
