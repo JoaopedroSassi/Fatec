@@ -66,14 +66,17 @@ Sub definindo()
      If ((nivel = 1) and (palv_nivI(opcao) <> "errado")) Then
          palavra = palv_nivI(opcao)
          palv_nivI(opcao) = "errado"
+         call falar
          call jogo
       ElseIf ((nivel = 2) and (palv_nivII(opcao) <> "errado")) Then
             palavra = palv_nivII(opcao)
             palv_nivII(opcao) = "errado" 
+            call falar
             call jogo
          ElseIf ((nivel = 3) and (palv_nivIII(opcao) <> "errado")) Then
                palavra = palv_nivIII(opcao)
                palv_nivIII(opcao) = "errado" 
+               call falar
                call jogo
             Else
             End If 
@@ -81,7 +84,6 @@ Sub definindo()
 End Sub ' definindo
 
 Sub jogo()
-   audio.speak("A palavra é: " & palavra & "")
    resp = LCase(InputBox("------------------------------------------" + vbNewLine & _
                    "Digite a palavra que foi falada: " + vbNewLine & _
                    "Pular: " & pulos & "| Ouvir: " & ouvir & "" + vbNewLine & _
@@ -90,16 +92,17 @@ Sub jogo()
 
    If (resp = "ouvir") Then
       If (ouvir = 0) Then
-         msgbox("Você não pode mais pular! Você acaba de perder :)"), vbInformation + vbOKOnly, "Grr"
-         call redefinindo
+         msgbox("Você não pode mais ouvir!"), vbInformation + vbOKOnly, "Grr"
+         call jogo
       Else
+         call falar
          ouvir = ouvir - 1
          call jogo
       End If
    ElseIf (resp = "pular") Then
       If (pulos = 0) Then
-         msgbox("Você não pode mais ouvir! Você acaba de perder :)"), vbInformation + vbOKOnly, "Grr"
-         call redefinindo
+         msgbox("Você não pode mais pular!"), vbInformation + vbOKOnly, "Grr"
+         call jogo
       Else
          pulos = pulos - 1
          call definindo
@@ -148,3 +151,7 @@ Sub vitoria()
       WScript.Quit
    End If
 End Sub ' vitoria
+
+Sub falar()
+   audio.speak("A palavra é: " & palavra)
+End Sub ' falar
