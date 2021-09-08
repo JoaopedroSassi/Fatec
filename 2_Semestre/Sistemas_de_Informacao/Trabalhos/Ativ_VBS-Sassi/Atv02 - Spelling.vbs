@@ -1,8 +1,8 @@
 dim nome, audio, opcao, nivel, palavra, resp, resp2, acertos, ach, pulos, ouvir
 
-dim palv_nivI(11) 
-dim palv_nivII(11)
-dim palv_nivIII(11)
+dim palv_nivI(10) 
+dim palv_nivII(10)
+dim palv_nivIII(10)
 '--------------------------------------------------
 
 call carregar_voz
