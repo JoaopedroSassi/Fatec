@@ -8,8 +8,7 @@ int main(){
 
    int x = 10;
    int *p = &x;
-   *p = 20;
-   printf("%d", *p);
-   printf("\n%d", x);
+   int **y = &p;
+   printf("%d", **y);
 
 }
