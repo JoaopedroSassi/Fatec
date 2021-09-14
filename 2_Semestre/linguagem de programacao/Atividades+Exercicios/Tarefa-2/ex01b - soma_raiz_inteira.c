@@ -4,12 +4,6 @@
 
 int soma_sqrt_int(int n){
 
-   for (int i = 0; i < n; i++){
-      if (i*i == n){
-         return i;
-      }     
-   }
-   
    float num2 = n;
    for (int i = 0; i < 10; ++i){
       num2 = num2/2 + n/(2*num2);

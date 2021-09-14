@@ -3,11 +3,6 @@
 #include <locale.h>
 
 int sqrt_int(int n){
-   for (int i = 0; i < n; i++){
-      if (i*i == n){
-         return i;
-      }     
-   }
 
    //Como não pude add a biblioteca math.h, utilizeo o método de Newton?Raphson para fazer uma raiz quadrada
    float num2 = n;
