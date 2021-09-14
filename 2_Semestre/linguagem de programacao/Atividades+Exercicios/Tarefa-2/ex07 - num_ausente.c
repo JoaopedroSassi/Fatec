@@ -3,7 +3,7 @@
 #include <locale.h>
 
 int verifica_numero(int *p, int t){
-   for (int i = 0; i < t; i++){
+   for (int i = 0; i <= t; i++){
       if (p[i] != i + 1){
          return i + 1;
       }
