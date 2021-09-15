@@ -9,7 +9,7 @@ Sub conectar_banco()
    Select Case resp
       Case 1
          set db=CreateObject("ADODB.Connection")
-         db.open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3312;Database=vbs_aula07;User=root;Password=")
+         db.open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3312;Database=db_VBS;User=root;Password=")
          msgbox("Conexão com Mysql executada"), vbinformation + vbOKOnly, "Atenção"
       case 2
          resp = msgbox("Deseja encerrar o Script?", vbQuestion + vbYesNo, "Aviso")
