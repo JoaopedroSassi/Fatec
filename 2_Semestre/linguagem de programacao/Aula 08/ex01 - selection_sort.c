@@ -2,8 +2,17 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void ordena_vetores(int *p, int t){
-   //code
+int ind_min(int *v, int beg, int end){
+
+}
+
+void sel_sort(int *p, int b, int e){
+   for (int i = 0; i < e; i++){
+      int men = ind_min(p, b, e);
+      int aux = p[i];
+      p[i] = p[men];
+      p[men] = aux;
+   }  
 }
 
 void main(){
@@ -21,7 +30,7 @@ void main(){
       scanf("%d", &vet[i]);
    }
 
-   ordena_vetores(vet, tam);
+   
 
    printf("\n---------------------------------\n");
 

@@ -2,8 +2,24 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void ordena_vetores(int *p, int t){
-   //code
+int *menor_indice(int *b, int *e){
+   int *min = b;
+   for (int *i = b+1; *i < e; ++i){
+      if (*i > *min){
+         min = i;
+      }
+   }
+
+   return min;
+}
+
+void ordena_selection (int *b, int *e){
+   for (;b < e -1; ++b)  {
+      int *min = menor_indice(b, e);
+      int aux = *b;
+      *b = *min;
+      *min = aux;
+   }
 }
 
 void main(){
@@ -21,7 +37,7 @@ void main(){
       scanf("%d", &vet[i]);
    }
 
-   ordena_vetores(vet, tam);
+   ordena_selection(vet, vet[tam]);
 
    printf("\n---------------------------------\n");
 
