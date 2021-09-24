@@ -1,4 +1,4 @@
-dim nome, audio, opcao, nivel, palavra, resp, resp2, acertos, ach, pulos, ouvir, db, rs, cont_id, cont, achei
+dim nome, audio, opcao, nivel, palavra, resp, resp2, acertos, ach, pulos, ouvir, db, rs, cont_id, achei
 
 dim palv_nivI(10) 
 dim palv_nivII(10)
