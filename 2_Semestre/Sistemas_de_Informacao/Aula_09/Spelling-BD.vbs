@@ -62,7 +62,12 @@ Sub redefinindo()
    nome = ucase(InputBox("------------------------------------------" + vbNewLine & _
                    "Bem vindo ao SPELLING " + vbNewLine & _
                    "Para começar, digite seu nome: ", "Bem vindo"))
-   call definindo
+   If (nome = "") Then
+      msgbox("ERRO! Nome inválido"), vbInformation + vbOKOnly, "Atenção"
+      call redefinindo
+   Else
+      call definindo
+   End If
 End Sub ' redefinindo
 
 
@@ -124,6 +129,7 @@ Sub jogo()
       msgbox("Parabéns, você acertou :D"), vbOKOnly + vbInformation, "Ebaa"
       call definindo
    Else
+      msgbox("Oh não, você errou :("), vbOKOnly + vbInformation, "nããão"
       call verifica_usuario
       call ranking
       resp2 = msgbox("Deseja tentar novamente?", vbQuestion + vbYesNo, "Aff")
