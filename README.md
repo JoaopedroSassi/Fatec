@@ -4,7 +4,7 @@ Arquivos e projetos relacionados a programação do período do meu Tecnólogo e
 ## Linguagens
 Até o momento, tivemos relação com as seguintes linguagens:
 * Portugol
-* Visual Basic Advance
+* Visual Basic for Applications
 * .Bat
 * VBScript
 * C
