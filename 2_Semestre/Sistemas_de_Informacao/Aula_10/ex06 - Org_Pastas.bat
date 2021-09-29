@@ -17,13 +17,7 @@ set /p op=Digite sua opcao desejada:
 
 if /i %op% equ G (goto:gerar)
 if /i %op% equ O (goto:organizar)
-if /i %op% equ E (goto:sair) else (
-	echo.
-	echo --------------------
-	echo Opcao Invalida!
-	echo --------------------
-	pause > null
-	goto:inicio)
+if /i %op% equ E (goto:sair) else (goto:inval)
 
 :gerar
 set /p arquivo=Digite o nome do arquivo a ser gerado:
@@ -52,6 +46,14 @@ echo  Arquivos organizados com sucesso!
 echo -------------------------------------------------
 pause > nul
 goto inicio
+
+:inval
+echo.
+echo --------------------
+echo Opcao Invalida!
+echo --------------------
+pause > null
+goto:inicio
 
 :sair
 echo.
