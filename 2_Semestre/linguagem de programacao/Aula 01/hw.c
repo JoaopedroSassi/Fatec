@@ -3,7 +3,7 @@
 #include <locale.h>
 #include <stdbool.h>
 
-     
+
 void main(){
     setlocale(LC_ALL,"Portuguese");
     
