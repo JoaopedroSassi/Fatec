@@ -8,6 +8,9 @@ int main(){
 
    int x = 10;
    int *p = &x;
+   printf("%d\n", *p);
+   printf("%d\n", p);
+
    int **y = &p;
    printf("%d", **y);
 
