@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "cadastro-ADSMA2", "cadastro-ADSMA2.vbproj", "{FDE329C5-4AB1-4055-8B57-F5E4CD904E2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDE329C5-4AB1-4055-8B57-F5E4CD904E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE329C5-4AB1-4055-8B57-F5E4CD904E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE329C5-4AB1-4055-8B57-F5E4CD904E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE329C5-4AB1-4055-8B57-F5E4CD904E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2496F140-A1A7-4A9C-B861-4405DEA8056D}
+	EndGlobalSection
+EndGlobal
