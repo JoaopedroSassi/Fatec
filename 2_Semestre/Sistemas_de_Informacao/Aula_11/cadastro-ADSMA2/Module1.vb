@@ -3,7 +3,7 @@
 Module Module1
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql As String
+    Public sql, resp As String
     Sub conectar_banco()
         Try
             db = CreateObject("ADODB.Connection")
@@ -21,6 +21,7 @@ Module Module1
             .txt_name.Clear()
             .txt_email.Clear()
             .txt_cpf.Focus()
+            .btn_delete.Enabled = False
         End With
     End Sub
 

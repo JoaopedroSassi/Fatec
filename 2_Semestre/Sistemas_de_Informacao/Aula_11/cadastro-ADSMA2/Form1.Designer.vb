@@ -31,8 +31,8 @@ Partial Class Form1
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btn_create = New System.Windows.Forms.ToolStripButton()
-        Me.btn_delete = New System.Windows.Forms.ToolStripButton()
         Me.btn_select = New System.Windows.Forms.ToolStripButton()
+        Me.btn_delete = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,7 +89,7 @@ Partial Class Form1
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_create, Me.btn_delete, Me.btn_select})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_create, Me.btn_select, Me.btn_delete})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(571, 25)
@@ -105,15 +105,6 @@ Partial Class Form1
         Me.btn_create.Size = New System.Drawing.Size(23, 22)
         Me.btn_create.Text = "ToolStripButton1"
         '
-        'btn_delete
-        '
-        Me.btn_delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btn_delete.Image = CType(resources.GetObject("btn_delete.Image"), System.Drawing.Image)
-        Me.btn_delete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(23, 22)
-        Me.btn_delete.Text = "ToolStripButton2"
-        '
         'btn_select
         '
         Me.btn_select.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -122,6 +113,16 @@ Partial Class Form1
         Me.btn_select.Name = "btn_select"
         Me.btn_select.Size = New System.Drawing.Size(23, 22)
         Me.btn_select.Text = "ToolStripButton3"
+        '
+        'btn_delete
+        '
+        Me.btn_delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_delete.Enabled = False
+        Me.btn_delete.Image = CType(resources.GetObject("btn_delete.Image"), System.Drawing.Image)
+        Me.btn_delete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(23, 22)
+        Me.btn_delete.Text = "ToolStripButton2"
         '
         'Form1
         '
