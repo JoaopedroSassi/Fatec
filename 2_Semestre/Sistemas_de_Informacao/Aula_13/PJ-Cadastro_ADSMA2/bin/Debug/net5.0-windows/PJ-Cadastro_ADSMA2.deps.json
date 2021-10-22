@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PJ-Cadastro_ADSMA2/1.0.0": {
+        "runtime": {
+          "PJ-Cadastro_ADSMA2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PJ-Cadastro_ADSMA2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
