@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uPu+MJjlBHhEzeoo68UKfSnoP0bGr5t2nqrq8IRKUltjpqteaTxpEJFvnOlW9olGRiKldTfhehLbD+LaNzEOcg==",
+  "dgSpecHash": "rht9m67u27yf6SsmLglnlxCCr9xWDAzBqhOsOuYb1fxqTOCFd5T6Uyd4PPgssXPyCm65BS6B9Fd5DbJu7Gn1Xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joaop\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
+  ],
   "logs": []
 }

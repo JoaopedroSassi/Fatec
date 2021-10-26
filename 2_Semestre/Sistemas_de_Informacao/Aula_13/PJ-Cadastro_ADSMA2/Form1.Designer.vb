@@ -81,19 +81,19 @@ Partial Class Form1
         '
         Me.ContasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CriaContasToolStripMenuItem, Me.AlterarContasToolStripMenuItem})
         Me.ContasToolStripMenuItem.Name = "ContasToolStripMenuItem"
-        Me.ContasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ContasToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.ContasToolStripMenuItem.Text = "Contas"
         '
         'CriaContasToolStripMenuItem
         '
         Me.CriaContasToolStripMenuItem.Name = "CriaContasToolStripMenuItem"
-        Me.CriaContasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CriaContasToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.CriaContasToolStripMenuItem.Text = "Criar contas"
         '
         'AlterarContasToolStripMenuItem
         '
         Me.AlterarContasToolStripMenuItem.Name = "AlterarContasToolStripMenuItem"
-        Me.AlterarContasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AlterarContasToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AlterarContasToolStripMenuItem.Text = "Alterar contas"
         '
         'AplicativosToolStripMenuItem
