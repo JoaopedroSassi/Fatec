@@ -51,20 +51,25 @@ Partial Class frm_clientes
         Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
         Me.pic_photo = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_data = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btn_create = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.txt_search = New System.Windows.Forms.ToolStripTextBox()
+        Me.btn_search = New System.Windows.Forms.ToolStripButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.pic_photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_data, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -168,7 +173,7 @@ Partial Class frm_clientes
         '
         'txt_uf
         '
-        Me.txt_uf.Location = New System.Drawing.Point(451, 231)
+        Me.txt_uf.Location = New System.Drawing.Point(533, 231)
         Me.txt_uf.Name = "txt_uf"
         Me.txt_uf.Size = New System.Drawing.Size(23, 23)
         Me.txt_uf.TabIndex = 18
@@ -177,7 +182,7 @@ Partial Class frm_clientes
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(451, 211)
+        Me.Label9.Location = New System.Drawing.Point(533, 211)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(23, 17)
         Me.Label9.TabIndex = 17
@@ -185,7 +190,7 @@ Partial Class frm_clientes
         '
         'txt_city
         '
-        Me.txt_city.Location = New System.Drawing.Point(346, 231)
+        Me.txt_city.Location = New System.Drawing.Point(187, 231)
         Me.txt_city.Name = "txt_city"
         Me.txt_city.Size = New System.Drawing.Size(90, 23)
         Me.txt_city.TabIndex = 16
@@ -194,7 +199,7 @@ Partial Class frm_clientes
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(346, 211)
+        Me.Label8.Location = New System.Drawing.Point(187, 211)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(49, 17)
         Me.Label8.TabIndex = 15
@@ -202,16 +207,16 @@ Partial Class frm_clientes
         '
         'txt_district
         '
-        Me.txt_district.Location = New System.Drawing.Point(186, 231)
+        Me.txt_district.Location = New System.Drawing.Point(297, 231)
         Me.txt_district.Name = "txt_district"
-        Me.txt_district.Size = New System.Drawing.Size(138, 23)
+        Me.txt_district.Size = New System.Drawing.Size(209, 23)
         Me.txt_district.TabIndex = 14
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(186, 211)
+        Me.Label7.Location = New System.Drawing.Point(297, 211)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(43, 17)
         Me.Label7.TabIndex = 13
@@ -336,7 +341,7 @@ Partial Class frm_clientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.dgv_data)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -345,34 +350,77 @@ Partial Class frm_clientes
         Me.TabPage2.Text = "Listagem de Clientes"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv_data
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(671, 327)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgv_data.AllowUserToAddRows = False
+        Me.dgv_data.AllowUserToDeleteRows = False
+        Me.dgv_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_data.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_data.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.dgv_data.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv_data.Location = New System.Drawing.Point(3, 3)
+        Me.dgv_data.Name = "dgv_data"
+        Me.dgv_data.ReadOnly = True
+        Me.dgv_data.RowTemplate.Height = 25
+        Me.dgv_data.Size = New System.Drawing.Size(671, 327)
+        Me.dgv_data.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "N°"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 46
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Cpf"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 51
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 64
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Edit"
+        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 33
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Delete"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 46
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_create, Me.ToolStripButton2, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.txt_search, Me.btn_search})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(706, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'btn_create
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Create"
+        Me.btn_create.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_create.Image = CType(resources.GetObject("btn_create.Image"), System.Drawing.Image)
+        Me.btn_create.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btn_create.Name = "btn_create"
+        Me.btn_create.Size = New System.Drawing.Size(23, 22)
+        Me.btn_create.Text = "ToolStripButton1"
+        Me.btn_create.ToolTipText = "Create"
         '
         'ToolStripButton2
         '
@@ -395,20 +443,21 @@ Partial Class frm_clientes
         Me.ToolStripLabel1.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripLabel1.Text = "Digite um parâmetro de busca:"
         '
-        'ToolStripTextBox1
+        'txt_search
         '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.ShortcutsEnabled = False
+        Me.txt_search.Size = New System.Drawing.Size(100, 25)
         '
-        'ToolStripButton3
+        'btn_search
         '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
-        Me.ToolStripButton3.ToolTipText = "Search"
+        Me.btn_search.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_search.Image = CType(resources.GetObject("btn_search.Image"), System.Drawing.Image)
+        Me.btn_search.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Size = New System.Drawing.Size(23, 22)
+        Me.btn_search.Text = "ToolStripButton3"
+        Me.btn_search.ToolTipText = "Search"
         '
         'OpenFileDialog1
         '
@@ -429,7 +478,7 @@ Partial Class frm_clientes
         Me.TabPage1.PerformLayout()
         CType(Me.pic_photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_data, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -466,12 +515,17 @@ Partial Class frm_clientes
     Friend WithEvents Label11 As Label
     Friend WithEvents txt_cell_phone As MaskedTextBox
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents dgv_data As DataGridView
+    Friend WithEvents btn_create As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
-    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents txt_search As ToolStripTextBox
+    Friend WithEvents btn_search As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewImageColumn
+    Friend WithEvents Column5 As DataGridViewImageColumn
 End Class
