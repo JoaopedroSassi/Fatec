@@ -37,3 +37,6 @@ C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informa
 C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\obj\Debug\net5.0-windows\ref\PJ-Cadastro_ADSMA2.dll
 C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\obj\Debug\net5.0-windows\PJ-Cadastro_ADSMA2.pdb
 C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\obj\Debug\net5.0-windows\PJ-Cadastro_ADSMA2.genruntimeconfig.cache
+C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\bin\Debug\net5.0-windows\MySql.Data.dll
+C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\obj\Debug\net5.0-windows\Interop.ADODB.dll
+C:\Users\joaop\Documents\Estudos\Fatec\repo_fatec\2_Semestre\Sistemas_de_Informacao\Aula_13\PJ-Cadastro_ADSMA2\obj\Debug\net5.0-windows\PJ-Cadastro_ADSMA2.vbproj.ResolveComReference.cache

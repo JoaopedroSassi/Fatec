@@ -12,4 +12,8 @@
             Exit Sub
         End Try
     End Sub
+
+    Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conectar_banco()
+    End Sub
 End Class
