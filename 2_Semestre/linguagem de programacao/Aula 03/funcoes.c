@@ -3,8 +3,8 @@
 #include <locale.h>
 
 double square(double x){
-        return x*x;
-    }
+    return x*x;
+}
 
 double sum (double x, double y){
     return x + y;
