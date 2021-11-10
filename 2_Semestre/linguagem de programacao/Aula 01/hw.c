@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 
-void main(){
+e{
     setlocale(LC_ALL,"Portuguese");
     
     printf("Entre com um valor: ");
