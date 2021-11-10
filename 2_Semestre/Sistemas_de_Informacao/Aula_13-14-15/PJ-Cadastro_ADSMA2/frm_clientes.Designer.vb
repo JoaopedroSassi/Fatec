@@ -52,11 +52,6 @@ Partial Class frm_clientes
         Me.pic_photo = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.dgv_data = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btn_create = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
@@ -65,6 +60,11 @@ Partial Class frm_clientes
         Me.txt_search = New System.Windows.Forms.ToolStripTextBox()
         Me.btn_search = New System.Windows.Forms.ToolStripButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.pic_photo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -366,43 +366,6 @@ Partial Class frm_clientes
         Me.dgv_data.Size = New System.Drawing.Size(671, 327)
         Me.dgv_data.TabIndex = 0
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "N°"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 46
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Cpf"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 51
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Name"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 64
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Edit"
-        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 33
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Delete"
-        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 46
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_create, Me.ToolStripButton2, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.txt_search, Me.btn_search})
@@ -462,6 +425,43 @@ Partial Class frm_clientes
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "N°"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 46
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Cpf"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 51
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 64
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Edit"
+        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 33
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Delete"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 46
         '
         'frm_clientes
         '

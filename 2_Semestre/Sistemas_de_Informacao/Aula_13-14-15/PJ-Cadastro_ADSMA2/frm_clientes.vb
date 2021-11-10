@@ -3,10 +3,9 @@
         Try
             With OpenFileDialog1
                 .title = "Selecione uma foto"
-                .InitialDirectory = Application.StartupPath & "..\img\"
+                .InitialDirectory = Application.StartupPath & "..\img"
                 .ShowDialog()
-                dir = .FileName
-                replace()
+                dir = Replace(.FileName, "\", "\\")
                 pic_photo.Load(dir)
             End With
         Catch ex As Exception
@@ -33,7 +32,7 @@
                 MsgBox("CEP: " & txt_cep.Text & "não localizado!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso")
             End If
         Catch ex As Exception
-            MsgBox("ERRO! Conexão mal sucedida!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
+            MsgBox("ERRO! Conexão mal sucedida CPF Lost Focus!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
         End Try
     End Sub
 
@@ -61,13 +60,13 @@
                 carregar_dados()
             End If
         Catch ex As Exception
-            MsgBox("ERRO! Conexão mal sucedida!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
+            MsgBox("ERRO! Conexão mal sucedida create!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
         End Try
     End Sub
 
     Private Sub txt_cpf_LostFocus(sender As Object, e As EventArgs) Handles txt_cpf.LostFocus
-        'Try
-        sql = "SELECT * FROM tb_clientes WHERE cpf = '" & txt_cpf.Text & "'"
+        Try
+            sql = "SELECT * FROM tb_clientes WHERE cpf = '" & txt_cpf.Text & "'"
             rs = db.Execute(sql)
             If rs.EOF = True Then
                 txt_name.Focus()
@@ -85,9 +84,9 @@
                 txt_email.Text = rs.Fields(11).Value
                 pic_photo.Load(rs.Fields(12).Value)
             End If
-        'Catch ex As Exception
-        'MsgBox("Erro ao processar cpf_lostfocus!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
-        'End Try
+        Catch ex As Exception
+            MsgBox("Erro ao processar cpf_lostfocus!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
+        End Try
     End Sub
 
     Private Sub txt_cpf_DoubleClick(sender As Object, e As EventArgs) Handles txt_cpf.DoubleClick
@@ -102,7 +101,7 @@
                 cont = 1
                 .Rows.Clear()
                 Do While rs.EOF = False
-                    .Rows.Add(cont, rs.Fields(0), rs.Fields(1), Nothing, Nothing)
+                    .Rows.Add(cont, rs.Fields(0).Value, rs.Fields(1).Value, Nothing, Nothing)
                     rs.MoveNext()
                     cont += 1
                 Loop

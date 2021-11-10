@@ -2,16 +2,15 @@
 Imports MySql.Data.MySqlClient
 
 Module Module1
-    Public resp, dir As String
+    Public resp, dir, sql As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql, str_caminho As String
     Public cont As Integer
 
     Sub conectar_banco()
         Try
             db = CreateObject("ADODB.Connection")
-            db.Open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3306;Database=db_cadastro_si;User=root;Password=loj159951")
+            db.Open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3306;Database=db_cadastro_si;User=root;Password=123456")
             MsgBox("Conexão com Mysql executada", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso")
         Catch ex As Exception
             MsgBox("Erro ao conectar MySQL!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
@@ -57,7 +56,7 @@ Module Module1
                 cont = 1
                 .Rows.Clear()
                 Do While rs.EOF = False
-                    .Rows.Add(cont, rs.Fields(0), rs.Fields(1), Nothing, Nothing)
+                    .Rows.Add(cont, rs.Fields(0).Value, rs.Fields(1).Value, Nothing, Nothing)
                     rs.MoveNext()
                     cont += 1
                 Loop
