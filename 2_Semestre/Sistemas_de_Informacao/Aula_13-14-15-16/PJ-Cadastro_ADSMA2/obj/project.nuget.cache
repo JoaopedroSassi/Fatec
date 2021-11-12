@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MhOZkYehqvxuYFC4afSldXwvyGdIgeTf0pHmpATxk2yyMNlHBw7reVRUh9cWXYHiruwAd5OkdPFtrlimaEdlXA==",
+  "dgSpecHash": "z30JSXjPlRyjcRt4Y5ZyITO+XIOPr/lBZZuzRT69mNrnW2jinRc015rVsLaiS68+VN7q+zBL6/856YDVSk6g3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joaop\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
+    "C:\\Users\\joaop\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512",
+    "C:\\Users\\joaop\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5zPIXVW9ssi1hWVvsgIqma0mt99kVyoEGLlBu9cpPovUbI20g0QBirs4vFNHNGg+wfGpLFlPsP0ehKG5usRXxA==",
+  "dgSpecHash": "Blr5faM4dwBLyLFeKV9yK2vI4xYXgj3+GgI2tu/+5A/v7vWo5CDnnvoNIahbCBsDyN/j87WmcBP1f35DRyIqUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_11\\cadastro-ADSMA2\\cadastro-ADSMA2.vbproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\joaop\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }
