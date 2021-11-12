@@ -23,14 +23,14 @@ int ind_max(struct task *ev, int n) {
 }
 
 void sel_sort(struct task *ev, int n){
-   while (n > 1){
+  /* while (n > 1){
       int m = ind_max(ev, n);
 
       struct task aux = ev[n-1];
       ev[n-1] = ev[m];
       ev[m] = aux;
       --n;
-   }
+   }*/
 }
 
 int size_of_max(struct task *ev, int n){
