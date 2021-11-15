@@ -1,6 +1,6 @@
 is_global = true
 build_property.ApplicationManifest = 
-build_property.StartupObject = PJ_Cadastro_ADSMA2.Form1
+build_property.StartupObject = PJ_Cadastro_ADSMA2.frm_clientes
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 
 build_property.ApplicationUseCompatibleTextRendering = 

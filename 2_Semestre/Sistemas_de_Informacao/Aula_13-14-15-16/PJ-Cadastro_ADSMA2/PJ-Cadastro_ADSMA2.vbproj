@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>PJ_Cadastro_ADSMA2</RootNamespace>
-    <StartupObject>PJ_Cadastro_ADSMA2.Form1</StartupObject>
+    <StartupObject>PJ_Cadastro_ADSMA2.frm_clientes</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>

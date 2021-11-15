@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Module Module1
-    Public resp, dir, sql As String
+    Public resp, dir, sql, aux_cpf As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public cont As Integer
@@ -11,7 +11,7 @@ Module Module1
         Try
             db = CreateObject("ADODB.Connection")
             db.Open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3306;Database=db_cadastro_si;User=root;Password=123456")
-            MsgBox("Conexão com Mysql executada", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso")
+            'MsgBox("Conexão com Mysql executada", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Aviso")
         Catch ex As Exception
             MsgBox("Erro ao conectar MySQL!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Aviso")
         End Try
@@ -66,4 +66,11 @@ Module Module1
         End Try
     End Sub
 
+    Sub carregar_tipo()
+        With frm_clientes.cmb_type.Items
+            .Add("Cpf")
+            .Add("Nome")
+        End With
+        frm_clientes.cmb_type.SelectedIndex = 1
+    End Sub
 End Module
