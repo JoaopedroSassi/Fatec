@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj": {}
+    "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj": {
+    "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
+        "projectUniqueName": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
         "projectName": "PJ-Cadastro_ADSMA2",
-        "projectPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
+        "projectPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
         "packagesPath": "C:\\Users\\joaop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16\\PJ-Cadastro_ADSMA2\\obj\\",
+        "outputPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17\\PJ-Cadastro_ADSMA2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
