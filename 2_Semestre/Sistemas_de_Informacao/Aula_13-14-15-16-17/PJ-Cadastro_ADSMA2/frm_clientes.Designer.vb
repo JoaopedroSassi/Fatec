@@ -79,7 +79,9 @@ Partial Class frm_clientes
         '
         Me.tab_control.Controls.Add(Me.TabPage1)
         Me.tab_control.Controls.Add(Me.TabPage2)
-        Me.tab_control.Location = New System.Drawing.Point(12, 34)
+        Me.tab_control.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tab_control.HotTrack = True
+        Me.tab_control.Location = New System.Drawing.Point(12, 32)
         Me.tab_control.Name = "tab_control"
         Me.tab_control.SelectedIndex = 0
         Me.tab_control.Size = New System.Drawing.Size(685, 361)
@@ -87,6 +89,7 @@ Partial Class frm_clientes
         '
         'TabPage1
         '
+        Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TabPage1.Controls.Add(Me.txt_email)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label11)
@@ -243,6 +246,7 @@ Partial Class frm_clientes
         '
         'txt_address
         '
+        Me.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_address.Location = New System.Drawing.Point(156, 179)
         Me.txt_address.Name = "txt_address"
         Me.txt_address.Size = New System.Drawing.Size(400, 23)
@@ -278,6 +282,7 @@ Partial Class frm_clientes
         '
         'txt_name
         '
+        Me.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_name.Location = New System.Drawing.Point(65, 122)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.Size = New System.Drawing.Size(428, 23)
@@ -324,6 +329,7 @@ Partial Class frm_clientes
         '
         'txt_cpf
         '
+        Me.txt_cpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_cpf.Location = New System.Drawing.Point(65, 66)
         Me.txt_cpf.Mask = "999.999.999-99"
         Me.txt_cpf.Name = "txt_cpf"
@@ -483,6 +489,7 @@ Partial Class frm_clientes
         Me.ClientSize = New System.Drawing.Size(706, 405)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.tab_control)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frm_clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_clientes"
