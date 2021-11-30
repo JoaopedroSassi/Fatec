@@ -3,8 +3,7 @@
 #include <locale.h>
 #include <stdbool.h>
 
-
-e{
+void main(){
     setlocale(LC_ALL,"Portuguese");
     
     printf("Entre com um valor: ");
