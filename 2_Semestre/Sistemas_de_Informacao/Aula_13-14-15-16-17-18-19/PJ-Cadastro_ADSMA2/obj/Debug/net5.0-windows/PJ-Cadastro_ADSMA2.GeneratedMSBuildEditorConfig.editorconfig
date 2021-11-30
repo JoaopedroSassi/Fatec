@@ -1,6 +1,6 @@
 is_global = true
 build_property.ApplicationManifest = My Project\app.manifest
-build_property.StartupObject = PJ_Cadastro_ADSMA2.frm_login
+build_property.StartupObject = PJ_Cadastro_ADSMA2.frm_relat_feral
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 
 build_property.ApplicationUseCompatibleTextRendering = 

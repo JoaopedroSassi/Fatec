@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>PJ_Cadastro_ADSMA2</RootNamespace>
-    <StartupObject>PJ_Cadastro_ADSMA2.frm_login</StartupObject>
+    <StartupObject>PJ_Cadastro_ADSMA2.frm_relat_feral</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
