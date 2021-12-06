@@ -6,17 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Cgu.Comum.Controls.ReportViewer/2.0.15": {
-        "dependencies": {
-          "Microsoft.Report.Viewer": "11.0.0"
-        },
-        "runtime": {
-          "lib/net48/CGU.Controls.ReportViewer.dll": {
-            "assemblyVersion": "2.0.15.0",
-            "fileVersion": "2.0.15.0"
-          }
-        }
-      },
       "FontAwesome.Sharp/5.15.3": {
         "runtime": {
           "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {
@@ -24,46 +13,16 @@
             "fileVersion": "5.15.3.0"
           }
         }
-      },
-      "Microsoft.Report.Viewer/11.0.0": {
-        "runtime": {
-          "lib/net/Microsoft.ReportViewer.Common.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2802.16"
-          },
-          "lib/net/Microsoft.ReportViewer.ProcessingObjectModel.DLL": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2802.16"
-          },
-          "lib/net/Microsoft.ReportViewer.WebForms.DLL": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2802.16"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "Cgu.Comum.Controls.ReportViewer/2.0.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MW+UBaWC5H7zZ33galK3LNOKRcnFdAnQavo867JlgrFqSBytPwOVMXukvg+6DpcgWP6W4TRVlvmbrR7oTAkwRQ==",
-      "path": "cgu.comum.controls.reportviewer/2.0.15",
-      "hashPath": "cgu.comum.controls.reportviewer.2.0.15.nupkg.sha512"
-    },
     "FontAwesome.Sharp/5.15.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
       "path": "fontawesome.sharp/5.15.3",
       "hashPath": "fontawesome.sharp.5.15.3.nupkg.sha512"
-    },
-    "Microsoft.Report.Viewer/11.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QMPHoeVcTiqO55tUyG6z97nkesI0k8rNr1brbyECJezrK8XyjICzuRR3QtsZFI/7kalm4Ko/JCvK0lm+gztTVQ==",
-      "path": "microsoft.report.viewer/11.0.0",
-      "hashPath": "microsoft.report.viewer.11.0.0.nupkg.sha512"
     }
   }
 }
