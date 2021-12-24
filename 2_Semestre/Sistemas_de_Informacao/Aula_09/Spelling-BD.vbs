@@ -11,7 +11,7 @@ call redefinindo
 
 Sub conectar_banco()
    set db=CreateObject("ADODB.Connection")
-   db.open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3312;Database=db_vbs_spell;User=root;Password=")
+   db.open("Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;PORT=3306;Database=db_vbs_spell;User=root;Password=123456")
    msgbox("Conexão com Mysql executada"), vbinformation + vbOKOnly, "Atenção"
 End Sub ' conectar_banco
 
