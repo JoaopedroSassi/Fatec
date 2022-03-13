@@ -10,16 +10,14 @@ Stack *stackIntercalate(Stack *st1, Stack *st2)
    Stack *aux1 = createStack();
    while(!emptyStack(st1))
    {
-      value = pop(st1);
-      push(aux1, value);
+      push(aux1, pop(st1));
       sizeStacks++;
    }
 
    Stack *aux2 = createStack();
    while(!emptyStack(st2))
    {
-      value = pop(st2);
-      push(aux2, value);
+      push(aux2, pop(st2));
       sizeStacks++;
    }
 

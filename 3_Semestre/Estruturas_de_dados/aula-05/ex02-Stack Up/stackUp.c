@@ -9,8 +9,7 @@ void stackUp(Stack *st1, Stack *st2)
    Stack *aux = createStack();
    while(!emptyStack(st2))
    {
-      value = pop(st2);
-      push(aux, value);
+      push(aux, pop(st2));
    }
 
    while(!emptyStack(aux))
