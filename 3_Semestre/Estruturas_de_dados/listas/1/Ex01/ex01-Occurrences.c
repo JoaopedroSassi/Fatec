@@ -16,9 +16,9 @@ void ocurrences(char *p)
       char letter = p[i];
       int amount = 1;
 
-      for (int j = i+1; j < sizePhrase; j++)
+      if(aux[i] != '-')
       {
-         if(aux[i] != '-')
+         for (int j = i+1; j < sizePhrase; j++)
          {
             if (letter == p[j])
             {
