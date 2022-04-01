@@ -7,6 +7,7 @@ Queue *queueIntercalate(Queue *st1, Queue *st2)
    float value = 0;
    int sizeQueue1 = 0, sizeQueue2 = 0;
 
+   //Criando uma Queue auxiliar e populando ela com os valores da primeira fila
    Queue *aux1 = createQueue();
    while(!emptyQueue(st1))
    {
@@ -14,6 +15,7 @@ Queue *queueIntercalate(Queue *st1, Queue *st2)
       sizeQueue1++;
    }
 
+   //Criando uma Queue auxiliar e populando ela com os valores da segunda fila
    Queue *aux2 = createQueue();
    while(!emptyQueue(st2))
    {
@@ -22,8 +24,9 @@ Queue *queueIntercalate(Queue *st1, Queue *st2)
    }
 
    Queue *final = createQueue();
-   while((sizeQueue1 + sizeQueue2) > 0)
+   while((sizeQueue1 + sizeQueue2) > 0) //Verificando se ainda tem dados pra serem enfileirados
    {
+      //Verificando se ainda tem dados na primeira fila
       if (sizeQueue1 != 0)
       {
          value = dequeue(aux1);
@@ -32,6 +35,7 @@ Queue *queueIntercalate(Queue *st1, Queue *st2)
          sizeQueue1--;
       }
       
+      //Verificando se ainda tem dados na segunda fila
       if (sizeQueue2 != 0)
       {
          value = dequeue(aux2);

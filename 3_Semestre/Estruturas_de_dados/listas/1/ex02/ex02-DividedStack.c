@@ -4,7 +4,7 @@
 
 Stack *divide(Stack *st)
 {
-   //Creating an auxiliary stack to make the operations
+   //Criando uma stack auxiliar pra poder fazer as operações
    Stack *aux = createStack();
    while(!emptyStack(st))
    {
@@ -14,13 +14,13 @@ Stack *divide(Stack *st)
    Stack *half = createStack();
    while(!emptyStack(aux))
    {
-      //Returning the values ??to the original and putting the value / 2 in the new one
+      //Voltando os valores para a stack original E os valores / 2 na nova
       float value = pop(aux);
       push(st, value);
       push(half, value/2);
    }
 
-   //Freeing memory
+   //Liberando memória
    freeStack(aux);
 
    return half;
