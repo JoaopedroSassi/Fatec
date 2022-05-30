@@ -3,13 +3,16 @@
 
 int pesquisaVetor(int vet[], int tam, int valor)
 { 
-   if(vet[tam] == valor)
-      return -1;
+   if(tam == 0) return -1;
 
-   return 1 + pesquisaVetor(vet, tam-1, valor);
+   if(vet[tam] == valor)
+      return tam;
+
+   return pesquisaVetor(vet, tam-1, valor);
 }
 
-void main(){
+void main()
+{
    int vet[] = {1, 2, 3, 4, 5};
    
    int n1 = pesquisaVetor(vet, 5, 3);
