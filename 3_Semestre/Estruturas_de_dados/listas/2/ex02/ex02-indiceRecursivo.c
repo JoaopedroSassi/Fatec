@@ -3,12 +3,12 @@
 
 int pesquisaVetor(int vet[], int tam, int valor)
 { 
-   if(tam == 0) return -1;
+   if(tam == 0) return -1; // Verificando se já é retorno
 
-   if(vet[tam] == valor)
+   if(vet[tam] == valor) //Verificando se achou o valor
       return tam;
 
-   return pesquisaVetor(vet, tam-1, valor);
+   return pesquisaVetor(vet, tam-1, valor); //Recursando dimiuindo o tam
 }
 
 void main()
