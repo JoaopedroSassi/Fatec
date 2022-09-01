@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<h1>Formulario</h1>
+	<form method="post">
+		<fieldset>
+			<Legend>Dados pessoais</Legend>
+			<br>
+			<label for="Nome">Digite seu nome:</label>
+			<input type="text" name="Nome" id="Nome">
+	
+			<br>
+			<label for="Email">Digite seu email:</label>
+			<input type="email" name="Email" id="Email">
+	
+			<br>
+			<label for="Idade">Digite sua idade:</label>
+			<input type="number" name="Idade" id="Idade">
+		</fieldset>
+		
+
+		<br>
+		<br>
+
+		<fieldset>
+			<legend>Dados da pesquisa</legend>
+			<br>
+			<label for="Dev">Você é um desenvolvedor ?</label>
+			<input type="checkbox" name="Dev" id="Dev">
+	
+			<br>
+			<label for="linguagens">Selecione sua linguagem favorita:</label>
+			<select name="linguagens" id="linguagens">
+				<option value="Java">Java</option>
+				<option value="PHP">PHP</option>
+				<option value="JavaScript">JavaScript</option>
+				<option value="C#">C#</option>
+				<option value="VB.NET">VB.NET</option>
+				<option value="C++">C++</option>
+				<option value="Algol">Algol</option>
+				<option value="SmalTalk">SmalTalk</option>
+				<option value="Ruby">Ruby</option>
+				<option value="Python">Python</option>
+			</select>
+		</fieldset>
+
+		<br>
+		<br>
+
+		<br>
+		<label for="feedback">Escreva uma sugestão:</label>
+		<textarea name="feedback" id="feedback">
+		</textarea>
+
+		<br>
+		<br>
+		<a href="obrigado.html" target="principal">
+			<input type="button" value="Enviar">
+		</a>
+	</form>
+</body>
+</html>
