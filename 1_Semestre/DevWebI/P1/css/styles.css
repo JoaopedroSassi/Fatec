@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background-color: #F8F8F8;
+}
+
+.form-container {
+	background-color: #FFF;
+	border-radius: 20px;
+	box-shadow: 0.5px 10px 15px rgb(0 0 0 / 20%);
+	margin: 10% auto auto auto;
+	padding: 25px;
+	display: flex;
+	align-items: center;
+	max-width: 72%;
+}
+
+.img-container {
+	margin: 50px 0 0 50px;
+	padding: 20px;
+}
+
+.img-container>img {
+	width: 40rem;
+}
+
+.link-container {
+	text-align: center;
+}
+
+.link-container>a {
+	text-decoration: none;
+	color: #000;
+	transition: .5s;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.link-container>a:hover {
+	color: #1A08EA;
+}
+
+.right-container {
+	padding-left: 5rem;
+}
+
+.welcome-text {
+	font-weight: 900;
+	margin-bottom: 30px;
+}
+
+.input-container {
+	position: relative;
+}
+
+.input-container .input-control {
+	width: 100%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #777;
+	box-shadow: none !important;
+}
+
+.input-container .input-control:focus {
+	border-color: #1A08EA;
+	border-width: medium medium 2px;
+}
+
+.input-container .floating-label {
+	position: absolute;
+	pointer-events: none;
+	top: 18px;
+	left: 0;
+	transition: 0.2s ease all;
+}
+
+.input-container input:focus~.floating-label,
+.input-container input:not(:focus):valid~.floating-label {
+	top: 0px;
+	left: 0;
+	font-size: 14px;
+	opacity: 1;
+}
+
+input[type=text] {
+	margin-bottom: 1.5rem;
+}
+
+input[type=password] {
+	margin-bottom: 1.5rem;
+}
+
+input[type=date] {
+	margin-bottom: 1.5rem;
+}
+
+.btn-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-control {
+	padding: .5rem;
+	font-size: 1rem;
+	border-radius: 10px;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s ease all;
+	width: 100px;
+}
+
+.btn-confirm {
+	background-color: #1A08EA;
+}
+
+.btn-confirm:hover {
+	background-color: #4a3ce2;
+}
+
+.btn-reset {
+	background-color: #3F3D56;
+}
+
+.btn-reset:hover {
+	background-color: #54516b;
+}
+
+.btn-register {
+	background-color: #1A08EA;
+}
+
+.btn-register:hover {
+	background-color: #4a3ce2;
+}
+
+#inotifications {
+	margin-bottom: 1rem;
+}

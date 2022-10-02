@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/scripts.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="form-container">
+		<div class="left-container">
+			<div class="img-container">
+				<img src="img/login.svg" alt="Example image of a room">
+			</div>
+			<div class="link-container">
+				<a href="register.html">Não tem uma conta? Registre-se!</a>
+			</div>
+		</div>
+		<div class="right-container">
+			<h1 class="welcome-text">Olá! Faça o login para continuar</h1>
+			<form action="" method="POST">
+				<div class="inputs-container">
+					<div class="input-container">
+						<br/>
+						<input class="input-control" type="text" name="email" id="iemail" required>
+						<label class="floating-label" for="iemail">Digite seu E-mail</label>
+					</div>
+					<div class="input-container">
+						<br/>
+						<input class="input-control" type="password" name="pass" id="ipassword" required>
+						<label class="floating-label" for="ipassword">Digite sua senha</label>
+					</div>
+				</div>
+				<div class="btn-container">
+					<button class="btn-control btn-confirm" type="button" onclick="login()">Entrar</button>
+					<button class="btn-control btn-reset" type="reset">Limpar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

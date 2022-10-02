@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registro</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/scripts.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="form-container">
+		<div class="left-container">
+			<h1 class="welcome-text">Preencha com os dados para cadastro!</h1>
+			<form action="" method="POST">
+				<div class="inputs-container">
+					<div class="input-container">
+						<br />
+						<input class="input-control" type="text" name="firstName" id="ifirstName" required>
+						<label class="floating-label" for="ifirstName">Digite seu primeiro nome</label>
+					</div>
+					<div class="input-container">
+						<br />
+						<input class="input-control" type="text" name="lastName" id="ilastName" required>
+						<label class="floating-label" for="ilastName">Digite seu último nome</label>
+					</div>
+					<div class="input-container">
+						<br />
+						<input class="input-control" type="text" name="email" id="iemail" required>
+						<label class="floating-label" for="iemail">Digite seu E-mail</label>
+					</div>
+					<div class="input-container">
+						<br />
+						<input class="input-control" type="date" name="birthDate" id="ibirthDate" required>
+					</div>
+					<div class="input-container">
+						<br />
+						<input class="input-control" type="password" name="pass" id="ipass" required>
+						<span class="floating-label" for="ipass">Digite sua senha</label>
+					</div>
+					<div class="input-container">
+						<br />
+						<span class="floating-label" for="inotifications">Deseja receber novidades no E-mail?</span>
+						<input class="input-control" type="checkbox" name="notifications" id="inotifications" required>
+					</div>
+				</div>
+				<div class="btn-container">
+					<button class="btn-control btn-register" type="button" onclick="register()">Registrar</button>
+				</div>
+			</form>
+		</div>
+		<div class="right-container">
+			<div class="img-container">
+				<img src="img/register.svg" alt="Example image of a room">
+			</div>
+			<div class="link-container">
+				<a href="index.html">Já tem uma conta? Faça login!</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
