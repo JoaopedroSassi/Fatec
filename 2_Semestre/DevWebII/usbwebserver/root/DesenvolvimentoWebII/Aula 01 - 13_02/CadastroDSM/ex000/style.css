@@ -1,0 +1,60 @@
+*{
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+	margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+	border: 1px solid #ddd;
+    padding: 5px;
+	width: 300px;
+}
+
+label{
+	margin-right: 15px;
+}
+
+input[type="submit"]{
+	background-color: white;
+	margin: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 16px;
+	transition: .5s ease;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	background-color: black;
+	color: white;
+}
+
+#form-group{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 25vh;
+	padding: 10px;
+    border-radius: 5px;
+}
+
+#form{
+	border: 1px solid black;
+	padding: 40px;
+}
+
+#btn-group{
+	display: flex;
+	flex-direction: column;
+}
+
+#tituloLogin{
+	margin: 10px;
+	font-size: 28px;
+	font-weight: bold;
+    color: black;
+	text-align: center;
+}
