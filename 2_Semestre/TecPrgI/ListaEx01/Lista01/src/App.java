@@ -57,6 +57,7 @@ public class App {
 				System.out.println("VALOR INVÁLIDO");
 				break;
 		}
+		scn.close();
 	}
 
 	public static void Ex01(String name, double value) {
