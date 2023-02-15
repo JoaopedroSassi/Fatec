@@ -1,8 +1,8 @@
 # Fatec
-Arquivos e projetos relacionados a programação do período do meu Tecnólogo em Análise e Desenvolvimento de Sistemas na FATEC
+Arquivos e projetos relacionados a programação do período do meu Tecnólogo em Análise e Desenvolvimento de Sistemas na Fatec SCS + Desenvolvimento de Software Multiplataforma na Fatec Mauá
 
 ## Linguagens
-Até o momento, tivemos relação com as seguintes linguagens:
+Até o momento, tive relação com as seguintes Linguagens/Ferramentas:
 * Portugol
 * Visual Basic for Applications
 * .Bat
@@ -10,4 +10,11 @@ Até o momento, tivemos relação com as seguintes linguagens:
 * C
 * Python
 * Vb.Net
+* HTML, CSS
+* JavaScript
+* SQL
+* PHP
+* Java
+* Power Apps
+
 
