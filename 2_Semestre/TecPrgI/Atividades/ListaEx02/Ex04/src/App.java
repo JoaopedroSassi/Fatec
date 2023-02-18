@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int age = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite sua idade: ", "Plano de saúde - SUS",
+        int age = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite sua idade: ", "Votação",
 				JOptionPane.INFORMATION_MESSAGE));
 
 		if (age < 16) {
