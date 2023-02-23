@@ -1,4 +1,9 @@
 .vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 outros/*
 FatecSCS/1_Semestre/ADM Geral
 FatecSCS/1_Semestre/Arquitetura e organizacao de computadores
@@ -20,3 +25,4 @@ FatecSCS/3_Semestre/InglesIII
 FatecSCS/3_Semestre/Economia
 FatecSCS/3_Semestre/SOI
 2_Semestre/DevWebII/usbwebserver/apache2/*
+!2_Semestre/DevWebII/usbwebserver/usbwebserver.exe
