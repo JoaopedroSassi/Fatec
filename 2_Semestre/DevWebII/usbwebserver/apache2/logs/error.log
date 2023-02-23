@@ -1,5 +1,5 @@
-[Thu Feb 23 11:55:22.828360 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Thu Feb 23 11:55:22.828360 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Thu Feb 23 11:55:22.828360 2023] [core:notice] [pid 6696:tid 724] AH00094: Command line: 'F:\\Downloads\\USBWebserver v8.6/apache2/bin/httpd_usbwv8.exe -d F:/Downloads/USBWebserver v8.6/apache2'
-[Thu Feb 23 11:55:22.840371 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00418: Parent: Created child process 11868
-[Thu Feb 23 11:55:23.783552 2023] [mpm_winnt:notice] [pid 11868:tid 640] AH00354: Child: Starting 64 worker threads.
+[Thu Feb 23 12:00:14.440825 2023] [mpm_winnt:notice] [pid 28564:tid 956] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Thu Feb 23 12:00:14.440825 2023] [mpm_winnt:notice] [pid 28564:tid 956] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Thu Feb 23 12:00:14.440825 2023] [core:notice] [pid 28564:tid 956] AH00094: Command line: 'C:\\Dev\\Fatec\\2_Semestre\\DevWebII\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d C:/Dev/Fatec/2_Semestre/DevWebII/usbwebserver/apache2'
+[Thu Feb 23 12:00:14.452838 2023] [mpm_winnt:notice] [pid 28564:tid 956] AH00418: Parent: Created child process 8424
+[Thu Feb 23 12:00:15.065393 2023] [mpm_winnt:notice] [pid 8424:tid 680] AH00354: Child: Starting 64 worker threads.
