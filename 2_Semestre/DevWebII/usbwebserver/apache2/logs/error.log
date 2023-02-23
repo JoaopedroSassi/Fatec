@@ -1,7 +1,5 @@
-[Mon Feb 13 20:21:20.936351 2023] [mpm_winnt:notice] [pid 20100:tid 800] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
-[Mon Feb 13 20:21:20.936351 2023] [mpm_winnt:notice] [pid 20100:tid 800] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
-[Mon Feb 13 20:21:20.936351 2023] [core:notice] [pid 20100:tid 800] AH00094: Command line: 'C:\\Users\\lab5.LABTEC\\Desktop\\Fatec\\2_Semestre\\DevWebII\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/lab5.LABTEC/Desktop/Fatec/2_Semestre/DevWebII/usbwebserver/apache2'
-[Mon Feb 13 20:21:20.936351 2023] [mpm_winnt:notice] [pid 20100:tid 800] AH00418: Parent: Created child process 16948
-[Mon Feb 13 20:21:21.295738 2023] [mpm_winnt:notice] [pid 16948:tid 824] AH00354: Child: Starting 64 worker threads.
-[Mon Feb 13 20:56:24.554046 2023] [:error] [pid 16948:tid 1308] [client ::1:61013] script 'C:/Users/lab5.LABTEC/Desktop/Fatec/2_Semestre/DevWebII/usbwebserver/root/DesenvolvimentoWebII/Aula01-13_02/index.php' not found or unable to stat, referer: http://localhost:8080/DesenvolvimentoWebII/Aula01-13_02/
-[Mon Feb 13 20:56:45.379123 2023] [:error] [pid 16948:tid 1308] [client ::1:61014] script 'C:/Users/lab5.LABTEC/Desktop/Fatec/2_Semestre/DevWebII/usbwebserver/root/DesenvolvimentoWebII/Aula01-13_02/index.php' not found or unable to stat, referer: http://localhost:8080/DesenvolvimentoWebII/Aula01-13_02/
+[Thu Feb 23 11:55:22.828360 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Thu Feb 23 11:55:22.828360 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Thu Feb 23 11:55:22.828360 2023] [core:notice] [pid 6696:tid 724] AH00094: Command line: 'F:\\Downloads\\USBWebserver v8.6/apache2/bin/httpd_usbwv8.exe -d F:/Downloads/USBWebserver v8.6/apache2'
+[Thu Feb 23 11:55:22.840371 2023] [mpm_winnt:notice] [pid 6696:tid 724] AH00418: Parent: Created child process 11868
+[Thu Feb 23 11:55:23.783552 2023] [mpm_winnt:notice] [pid 11868:tid 640] AH00354: Child: Starting 64 worker threads.
