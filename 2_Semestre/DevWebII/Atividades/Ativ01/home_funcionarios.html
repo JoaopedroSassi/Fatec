@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="/action_page.php">
+        <fieldset id="fd_campos">
+            <legend>
+                <h1>Atividade 01</h1>
+            </legend>
+            <div id="form-group">
+                <label for="nome_func">Nome do funcionário:</label>
+                <input type="text" id="nome_func" name="nome_func"><br><br>
+                <label for="cargos">Cargos</label>
+                <select name="cargos" id="cargos">
+                    <option value="Analista de sistemas">Analista de sistemas</option>
+                </select>
+                <label for="qtde_sal_min">Qtde salários mínimos:</label>
+                <input type="text" id="qtde_sal_min" name="qtde_sal_min"><br><br>
+                <label for="data_admissao">Data de admissão:</label>
+                <input type="date" id="data_admissao" name="data_admissao"><br><br>
+                <input type="submit" value="Cadastrar">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
