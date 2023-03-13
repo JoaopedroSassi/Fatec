@@ -101,7 +101,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="jqruj4kbkuHbmpW3DuZw" name="Cadastro de imóveis">
-        <mxGraphModel dx="1386" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1155" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -170,7 +170,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="a3GvSqF0y6ojzxqelCCo-16" value="Dados forem inválidos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="590" y="185" width="110" height="30" as="geometry"/>
+                    <mxGeometry x="560" y="215" width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="a3GvSqF0y6ojzxqelCCo-19" value="4: Retorna dados inválidos" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" parent="1" target="a3GvSqF0y6ojzxqelCCo-18" edge="1">
                     <mxGeometry x="0.005" relative="1" as="geometry">
@@ -202,7 +202,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="hDr87PeS2UrCyyFp3EbR" name="Consultar imóvel">
-        <mxGraphModel dx="1386" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1155" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -317,7 +317,7 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="OrR11nenW8guVWxDs1CO-1" value="Visualizar proposta" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=40;" vertex="1" parent="1">
-                    <mxGeometry x="50" y="30" width="720" height="410" as="geometry"/>
+                    <mxGeometry x="50" y="30" width="590" height="360" as="geometry"/>
                 </mxCell>
                 <mxCell id="OrR11nenW8guVWxDs1CO-7" value="Base de dados" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
                     <mxGeometry x="520" y="70" width="100" height="300" as="geometry"/>
@@ -393,7 +393,7 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="0aX1Dg7wp05ddp50-u58-1" value="Fazer proposta" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=40;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="30" width="720" height="410" as="geometry"/>
+                    <mxGeometry x="20" y="30" width="720" height="370" as="geometry"/>
                 </mxCell>
                 <mxCell id="0aX1Dg7wp05ddp50-u58-2" value="Base de dados" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
                     <mxGeometry x="520" y="70" width="100" height="300" as="geometry"/>
@@ -470,12 +470,12 @@
         </mxGraphModel>
     </diagram>
     <diagram id="9FT_AP9ppYvOUIp_3-mN" name="Agendar visita">
-        <mxGraphModel dx="885" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1155" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="X4i2V2N0EtsocpbkIfkz-1" value="Agendar visita" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=40;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="40" width="670" height="410" as="geometry"/>
+                    <mxGeometry x="20" y="40" width="670" height="350" as="geometry"/>
                 </mxCell>
                 <mxCell id="X4i2V2N0EtsocpbkIfkz-2" value="Base de dados" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" vertex="1" parent="1">
                     <mxGeometry x="560" y="70" width="100" height="300" as="geometry"/>
