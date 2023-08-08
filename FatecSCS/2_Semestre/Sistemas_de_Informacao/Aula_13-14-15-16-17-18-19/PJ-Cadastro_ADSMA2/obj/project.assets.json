@@ -1,18 +1,9 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
+    ".NETFramework,Version=v5.0,Profile=windows": {
       "FontAwesome.Sharp/5.15.3": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/FontAwesome.Sharp.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App"
-        ]
+        "type": "package"
       }
     }
   },
@@ -35,41 +26,42 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
+    ".NETFramework,Version=v5.0,Profile=windows": [
       "FontAwesome.Sharp >= 5.15.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joaop\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lab5.LABTEC\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
+      "projectUniqueName": "C:\\Users\\lab5.LABTEC\\Desktop\\Fatec\\FatecSCS\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
       "projectName": "PJ-Cadastro_ADSMA2",
-      "projectPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
-      "packagesPath": "C:\\Users\\joaop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joaop\\Documents\\Estudos\\Fatec\\repo_fatec\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\obj\\",
+      "projectPath": "C:\\Users\\lab5.LABTEC\\Desktop\\Fatec\\FatecSCS\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\PJ-Cadastro_ADSMA2.vbproj",
+      "packagesPath": "C:\\Users\\lab5.LABTEC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lab5.LABTEC\\Desktop\\Fatec\\FatecSCS\\2_Semestre\\Sistemas_de_Informacao\\Aula_13-14-15-16-17-18-19\\PJ-Cadastro_ADSMA2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\joaop\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\lab5.LABTEC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net50-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net50-windows": {
           "projectReferences": {}
         }
       },
@@ -80,40 +72,25 @@
       }
     },
     "frameworks": {
-      "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+      "net50-windows": {
         "dependencies": {
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[5.15.3, )"
           }
-        },
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.12, 5.0.12]"
-          }
-        ],
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "O pacote FontAwesome.Sharp 5.15.3 não é compatível com net50-windows (.NETFramework,Version=v5.0,Profile=windows). O pacote FontAwesome.Sharp 5.15.3 dá suporte a:\r\n  - net40 (.NETFramework,Version=v4.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net472 (.NETFramework,Version=v4.7.2)\r\n  - net48 (.NETFramework,Version=v4.8)\r\n  - netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "FontAwesome.Sharp",
+      "targetGraphs": [
+        ".NETFramework,Version=v5.0,Profile=windows"
+      ]
+    }
+  ]
 }
