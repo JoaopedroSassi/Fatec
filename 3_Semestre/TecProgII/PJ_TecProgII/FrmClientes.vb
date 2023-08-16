@@ -1,5 +1,4 @@
 ﻿Public Class FrmClientes
-    Dim diretorio As String
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles ImgFoto.Click
         Try
             With OpenFileDialog1
@@ -10,7 +9,11 @@
                 ImgFoto.Load(diretorio)
             End With
         Catch ex As Exception
-            MsgBox("Erro ao carregar a imagem", MsgBoxStyle.Critical + vbOKOnly, "Atenção")
+            Exit Sub
         End Try
+    End Sub
+
+    Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ConectarBanco()
     End Sub
 End Class

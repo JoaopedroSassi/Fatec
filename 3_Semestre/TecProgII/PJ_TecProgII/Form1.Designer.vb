@@ -69,26 +69,26 @@ Partial Class Form1
         '
         Me.ProgramasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BásicosToolStripMenuItem, Me.IntermediáriosToolStripMenuItem, Me.AvançadosToolStripMenuItem})
         Me.ProgramasToolStripMenuItem.Name = "ProgramasToolStripMenuItem"
-        Me.ProgramasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProgramasToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ProgramasToolStripMenuItem.Text = "Programas"
         '
         'BásicosToolStripMenuItem
         '
         Me.BásicosToolStripMenuItem.Name = "BásicosToolStripMenuItem"
-        Me.BásicosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BásicosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.BásicosToolStripMenuItem.Text = "Básicos"
         '
         'IntermediáriosToolStripMenuItem
         '
         Me.IntermediáriosToolStripMenuItem.Name = "IntermediáriosToolStripMenuItem"
-        Me.IntermediáriosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.IntermediáriosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.IntermediáriosToolStripMenuItem.Text = "Intermediários"
         '
         'AvançadosToolStripMenuItem
         '
         Me.AvançadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroClientesToolStripMenuItem})
         Me.AvançadosToolStripMenuItem.Name = "AvançadosToolStripMenuItem"
-        Me.AvançadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AvançadosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.AvançadosToolStripMenuItem.Text = "Avançados"
         '
         'CadastroClientesToolStripMenuItem
@@ -133,6 +133,7 @@ Partial Class Form1
         Me.CalculadoraToolStripMenuItem.Name = "CalculadoraToolStripMenuItem"
         Me.CalculadoraToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
         Me.CalculadoraToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.CalculadoraToolStripMenuItem.Tag = "calc.exe"
         Me.CalculadoraToolStripMenuItem.Text = "Calculadora"
         '
         'ExcelToolStripMenuItem
@@ -141,6 +142,7 @@ Partial Class Form1
         Me.ExcelToolStripMenuItem.Name = "ExcelToolStripMenuItem"
         Me.ExcelToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F2), System.Windows.Forms.Keys)
         Me.ExcelToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.ExcelToolStripMenuItem.Tag = "excel.exe"
         Me.ExcelToolStripMenuItem.Text = "Excel"
         '
         'BlocoDeNotasToolStripMenuItem
@@ -149,6 +151,7 @@ Partial Class Form1
         Me.BlocoDeNotasToolStripMenuItem.Name = "BlocoDeNotasToolStripMenuItem"
         Me.BlocoDeNotasToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F3), System.Windows.Forms.Keys)
         Me.BlocoDeNotasToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.BlocoDeNotasToolStripMenuItem.Tag = "notepad.exe"
         Me.BlocoDeNotasToolStripMenuItem.Text = "Bloco de Notas"
         '
         'Form1
