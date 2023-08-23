@@ -26,23 +26,28 @@ Partial Class FrmClientes
         Me.ImgFoto = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGravar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TxtCPF = New System.Windows.Forms.MaskedTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtNome = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TxtNome = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtCPF = New System.Windows.Forms.MaskedTextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DgvDados = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.ImgFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvDados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImgFoto
@@ -62,22 +67,22 @@ Partial Class FrmClientes
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGravar, Me.ToolStripButton2, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'BtnGravar
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Gravar"
+        Me.BtnGravar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BtnGravar.Image = CType(resources.GetObject("BtnGravar.Image"), System.Drawing.Image)
+        Me.BtnGravar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGravar.Name = "BtnGravar"
+        Me.BtnGravar.Size = New System.Drawing.Size(23, 22)
+        Me.BtnGravar.Text = "ToolStripButton1"
+        Me.BtnGravar.ToolTipText = "Gravar"
         '
         'ToolStripButton2
         '
@@ -124,25 +129,21 @@ Partial Class FrmClientes
         Me.TabPage1.Text = "Dados Pessoais"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'Label2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(723, 342)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Listagem geral"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(56, 118)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(35, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Nome"
         '
-        'TxtCPF
+        'TxtNome
         '
-        Me.TxtCPF.Location = New System.Drawing.Point(56, 66)
-        Me.TxtCPF.Mask = "999,999,999-9"
-        Me.TxtCPF.Name = "TxtCPF"
-        Me.TxtCPF.Size = New System.Drawing.Size(82, 20)
-        Me.TxtCPF.TabIndex = 1
-        Me.TxtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TxtNome.Location = New System.Drawing.Point(56, 134)
+        Me.TxtNome.Name = "TxtNome"
+        Me.TxtNome.Size = New System.Drawing.Size(394, 20)
+        Me.TxtNome.TabIndex = 3
         '
         'Label1
         '
@@ -153,29 +154,76 @@ Partial Class FrmClientes
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "CPF"
         '
-        'TxtNome
+        'TxtCPF
         '
-        Me.TxtNome.Location = New System.Drawing.Point(56, 134)
-        Me.TxtNome.Name = "TxtNome"
-        Me.TxtNome.Size = New System.Drawing.Size(394, 20)
-        Me.TxtNome.TabIndex = 3
+        Me.TxtCPF.Location = New System.Drawing.Point(56, 66)
+        Me.TxtCPF.Mask = "999,999,999-99"
+        Me.TxtCPF.Name = "TxtCPF"
+        Me.TxtCPF.Size = New System.Drawing.Size(93, 20)
+        Me.TxtCPF.TabIndex = 1
+        Me.TxtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label2
+        'TabPage2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(56, 118)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Nome"
+        Me.TabPage2.Controls.Add(Me.DgvDados)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(723, 342)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Listagem geral"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'DgvDados
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 17)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(683, 305)
-        Me.DataGridView1.TabIndex = 0
+        Me.DgvDados.AllowUserToAddRows = False
+        Me.DgvDados.AllowUserToDeleteRows = False
+        Me.DgvDados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DgvDados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvDados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DgvDados.Location = New System.Drawing.Point(20, 17)
+        Me.DgvDados.Name = "DgvDados"
+        Me.DgvDados.ReadOnly = True
+        Me.DgvDados.Size = New System.Drawing.Size(683, 305)
+        Me.DgvDados.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "N°"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 44
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "CPF do Cliente"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 94
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nome do Cliente"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 101
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Editar"
+        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 40
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Excluir"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 44
         '
         'FrmClientes
         '
@@ -194,7 +242,7 @@ Partial Class FrmClientes
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvDados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -203,7 +251,7 @@ Partial Class FrmClientes
     Friend WithEvents ImgFoto As PictureBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents BtnGravar As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents TabControl1 As TabControl
@@ -213,5 +261,10 @@ Partial Class FrmClientes
     Friend WithEvents TxtNome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtCPF As MaskedTextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvDados As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewImageColumn
+    Friend WithEvents Column5 As DataGridViewImageColumn
 End Class
