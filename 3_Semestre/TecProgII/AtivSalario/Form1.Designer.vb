@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
-        TabControl1 = New TabControl()
+        TabPages = New TabControl()
         TabPage1 = New TabPage()
         BtnSalvar = New Button()
         GroupBox1 = New GroupBox()
@@ -39,25 +39,36 @@ Partial Class Form1
         Label3 = New Label()
         Label2 = New Label()
         CmbCargo = New ComboBox()
-        PictureBox1 = New PictureBox()
+        PicFoto = New PictureBox()
         TxtNome = New TextBox()
         Label1 = New Label()
         TabPage2 = New TabPage()
-        TabControl1.SuspendLayout()
+        DgvDados = New DataGridView()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
+        Column6 = New DataGridViewImageColumn()
+        Column7 = New DataGridViewImageColumn()
+        OpenFileDialog1 = New OpenFileDialog()
+        TabPages.SuspendLayout()
         TabPage1.SuspendLayout()
         GroupBox1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PicFoto, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage2.SuspendLayout()
+        CType(DgvDados, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' TabControl1
+        ' TabPages
         ' 
-        TabControl1.Controls.Add(TabPage1)
-        TabControl1.Controls.Add(TabPage2)
-        TabControl1.Location = New Point(34, 21)
-        TabControl1.Name = "TabControl1"
-        TabControl1.SelectedIndex = 0
-        TabControl1.Size = New Size(760, 425)
-        TabControl1.TabIndex = 0
+        TabPages.Controls.Add(TabPage1)
+        TabPages.Controls.Add(TabPage2)
+        TabPages.Location = New Point(12, 12)
+        TabPages.Name = "TabPages"
+        TabPages.SelectedIndex = 0
+        TabPages.Size = New Size(806, 439)
+        TabPages.TabIndex = 0
         ' 
         ' TabPage1
         ' 
@@ -69,13 +80,13 @@ Partial Class Form1
         TabPage1.Controls.Add(Label3)
         TabPage1.Controls.Add(Label2)
         TabPage1.Controls.Add(CmbCargo)
-        TabPage1.Controls.Add(PictureBox1)
+        TabPage1.Controls.Add(PicFoto)
         TabPage1.Controls.Add(TxtNome)
         TabPage1.Controls.Add(Label1)
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(752, 397)
+        TabPage1.Size = New Size(798, 411)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Dados funcionário"
         TabPage1.UseVisualStyleBackColor = True
@@ -215,16 +226,16 @@ Partial Class Form1
         CmbCargo.Size = New Size(153, 23)
         CmbCargo.TabIndex = 3
         ' 
-        ' PictureBox1
+        ' PicFoto
         ' 
-        PictureBox1.BorderStyle = BorderStyle.FixedSingle
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(611, 28)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(117, 129)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 2
-        PictureBox1.TabStop = False
+        PicFoto.BorderStyle = BorderStyle.FixedSingle
+        PicFoto.Image = CType(resources.GetObject("PicFoto.Image"), Image)
+        PicFoto.Location = New Point(599, 28)
+        PicFoto.Name = "PicFoto"
+        PicFoto.Size = New Size(129, 129)
+        PicFoto.SizeMode = PictureBoxSizeMode.StretchImage
+        PicFoto.TabIndex = 2
+        PicFoto.TabStop = False
         ' 
         ' TxtNome
         ' 
@@ -245,40 +256,115 @@ Partial Class Form1
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(DgvDados)
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(752, 397)
+        TabPage2.Size = New Size(798, 411)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Listagem Geral Rendimentos"
         TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' DgvDados
+        ' 
+        DgvDados.AllowUserToAddRows = False
+        DgvDados.AllowUserToDeleteRows = False
+        DgvDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+        DgvDados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvDados.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6, Column7})
+        DgvDados.Location = New Point(3, 44)
+        DgvDados.Name = "DgvDados"
+        DgvDados.ReadOnly = True
+        DgvDados.RowTemplate.Height = 25
+        DgvDados.Size = New Size(789, 337)
+        DgvDados.TabIndex = 0
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "ID"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        Column1.Width = 43
+        ' 
+        ' Column2
+        ' 
+        Column2.HeaderText = "Nome"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        Column2.Width = 65
+        ' 
+        ' Column3
+        ' 
+        Column3.HeaderText = "Cargo"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        Column3.Width = 64
+        ' 
+        ' Column4
+        ' 
+        Column4.HeaderText = "Salário Bruto"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        Column4.Width = 99
+        ' 
+        ' Column5
+        ' 
+        Column5.HeaderText = "Salário Líquido"
+        Column5.Name = "Column5"
+        Column5.ReadOnly = True
+        Column5.Width = 110
+        ' 
+        ' Column6
+        ' 
+        Column6.HeaderText = "Editar"
+        Column6.Image = CType(resources.GetObject("Column6.Image"), Image)
+        Column6.ImageLayout = DataGridViewImageCellLayout.Zoom
+        Column6.Name = "Column6"
+        Column6.ReadOnly = True
+        Column6.Width = 43
+        ' 
+        ' Column7
+        ' 
+        Column7.HeaderText = "Excluir"
+        Column7.Image = CType(resources.GetObject("Column7.Image"), Image)
+        Column7.ImageLayout = DataGridViewImageCellLayout.Zoom
+        Column7.Name = "Column7"
+        Column7.ReadOnly = True
+        Column7.Width = 48
+        ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(828, 472)
-        Controls.Add(TabControl1)
+        ClientSize = New Size(827, 469)
+        Controls.Add(TabPages)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Formulário Principal"
-        TabControl1.ResumeLayout(False)
+        TabPages.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PicFoto, ComponentModel.ISupportInitialize).EndInit()
+        TabPage2.ResumeLayout(False)
+        CType(DgvDados, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPages As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TxtNome As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents CmbCargo As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PicFoto As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtSalarios As TextBox
     Friend WithEvents DtpData As DateTimePicker
@@ -292,5 +378,13 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents TxtINSS As TextBox
     Friend WithEvents BtnSalvar As Button
-
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents DgvDados As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewImageColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
 End Class
