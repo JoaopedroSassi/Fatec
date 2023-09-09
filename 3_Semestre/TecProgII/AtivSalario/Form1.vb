@@ -115,4 +115,19 @@
         End With
         TabPages.SelectedTab = TabPages.TabPages(0)
     End Sub
+
+    Private Sub TxtPesquisa_TextChanged(sender As Object, e As EventArgs) Handles TxtPesquisa.TextChanged
+        Try
+            SQL = $"SELECT * FROM TbFuncionario WHERE nome LIKE '{TxtPesquisa.Text}%' ORDER BY nome ASC"
+            rs = db.Execute(SQL)
+            With DgvDados
+                .Rows.Clear()
+                Do While rs.EOF = False
+                    .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(5).Value, rs.Fields(6).Value, Nothing, Nothing)
+                    rs.MoveNext()
+                Loop
+            End With
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

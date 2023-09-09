@@ -43,6 +43,7 @@ Partial Class Form1
         TxtNome = New TextBox()
         Label1 = New Label()
         TabPage2 = New TabPage()
+        TxtPesquisa = New TextBox()
         DgvDados = New DataGridView()
         Column1 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
@@ -256,6 +257,7 @@ Partial Class Form1
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(TxtPesquisa)
         TabPage2.Controls.Add(DgvDados)
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
@@ -265,6 +267,13 @@ Partial Class Form1
         TabPage2.Text = "Listagem Geral Rendimentos"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' TxtPesquisa
+        ' 
+        TxtPesquisa.Location = New Point(605, 18)
+        TxtPesquisa.Name = "TxtPesquisa"
+        TxtPesquisa.Size = New Size(176, 23)
+        TxtPesquisa.TabIndex = 1
+        ' 
         ' DgvDados
         ' 
         DgvDados.AllowUserToAddRows = False
@@ -273,7 +282,7 @@ Partial Class Form1
         DgvDados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         DgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DgvDados.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5, Column6, Column7})
-        DgvDados.Location = New Point(3, 44)
+        DgvDados.Location = New Point(3, 59)
         DgvDados.Name = "DgvDados"
         DgvDados.ReadOnly = True
         DgvDados.RowTemplate.Height = 25
@@ -354,6 +363,7 @@ Partial Class Form1
         GroupBox1.PerformLayout()
         CType(PicFoto, ComponentModel.ISupportInitialize).EndInit()
         TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
         CType(DgvDados, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -387,4 +397,5 @@ Partial Class Form1
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewImageColumn
     Friend WithEvents Column7 As DataGridViewImageColumn
+    Friend WithEvents TxtPesquisa As TextBox
 End Class
