@@ -5,8 +5,9 @@ CREATE TABLE TbFuncionario (
 	nome VARCHAR(200),
 	cargo VARCHAR(200),
 	caminhoFoto VARCHAR(250),
-	dataAdmissao DATETIME,
-	salarioBruto DVARCHAR(200),
+	dataAdmissao VARCHAR(200),
+	salarioBruto VARCHAR(200),
 	salarioLiquido VARCHAR(200),
-	INSS VARCHAR(200)
+	INSS VARCHAR(200),
+	QtdeSalarios varchar(20)
 );
