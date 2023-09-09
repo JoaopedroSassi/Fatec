@@ -6,7 +6,7 @@ CREATE TABLE TbFuncionario (
 	cargo VARCHAR(200),
 	caminhoFoto VARCHAR(250),
 	dataAdmissao DATETIME,
-	salarioBruto DECIMAL(14, 2),
-	salarioLiquido DECIMAL(14, 2),
-	INSS DECIMAL(14, 2)
+	salarioBruto DVARCHAR(200),
+	salarioLiquido VARCHAR(200),
+	INSS VARCHAR(200)
 );
