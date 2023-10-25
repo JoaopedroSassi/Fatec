@@ -19,7 +19,7 @@ namespace CadastroDSM_CSHARP
         {
             try
             {
-                Conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["Fatec"].ConnectionString);
+                Conexao = new SqlConnection(ConfigurationManager.ConnectionStrings["Local"].ConnectionString);
                 Conexao.Open();
                 MessageBox.Show("Conexão magna!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -30,83 +30,66 @@ namespace CadastroDSM_CSHARP
             }
         }
 
+        private void LimparCampos()
+        {
+            TxtCPF.Clear();
+            TxtNome.Clear();
+            TxtCPF.Focus();
+        }
+
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            try
+            if (Convert.ToBoolean(GlobalData.MyDictionary["isUpdate"]) is true)
             {
-                using (SqlCommand cmd = new SqlCommand())
+                try
                 {
-                    cmd.Connection = Conexao;
-                    cmd.CommandText = "SELECT TOP(1) id_user FROM tb_cadastro WHERE id = @ID";
+                    string id = GlobalData.MyDictionary["idUsuarioUPD"].ToString();
 
-                    //cmd.Parameters.AddWithValue("@ID", );
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (GlobalData.MyDictionary.ContainsKey("idUsuarioUPD"))
+                    using (SqlCommand cmd = new SqlCommand())
                     {
-                        try
-                        {
-                            string id = reader.GetValue(0).ToString();
-                            reader.Close();
+                        cmd.Connection = Conexao;
+                        cmd.CommandText = "UPDATE tb_cadastro SET nome = @NOME, cpf = @CPF WHERE id_user = @ID";
 
-                            using (SqlCommand cmd2 = new SqlCommand())
-                            {
-                                cmd2.Connection = Conexao;
-                                cmd2.CommandText = "UPDATE tb_cadastro SET nome = @NOME, cpf = @CPF WHERE id_user = @ID";
+                        cmd.Parameters.AddWithValue("@CPF", TxtCPF.Text);
+                        cmd.Parameters.AddWithValue("@NOME", TxtNome.Text);
+                        cmd.Parameters.AddWithValue("@ID", id);
 
-                                cmd2.Parameters.AddWithValue("@CPF", TxtCPF.Text);
-                                cmd2.Parameters.AddWithValue("@NOME", TxtNome.Text);
-                                cmd2.Parameters.AddWithValue("@ID", id);
-
-                                cmd2.ExecuteNonQuery();
-                                MessageBox.Show("Dados atualizados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Erro ao atualizar no DB - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            throw ex;
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            reader.Close();
-
-                            using (SqlCommand cmd2 = new SqlCommand())
-                            {
-                                cmd2.Connection = Conexao;
-                                cmd2.CommandText = "INSERT INTO tb_cadastro VALUES (@CPF, @NOME)";
-
-                                cmd2.Parameters.AddWithValue("@CPF", TxtCPF.Text);
-                                cmd2.Parameters.AddWithValue("@NOME", TxtNome.Text);
-
-                                cmd2.ExecuteNonQuery();
-                                MessageBox.Show("Dados gravados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Erro ao salvar no DB - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            throw ex;
-                        }
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Dados atualizados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
-                    TxtCPF.Clear();
-                    TxtNome.Clear();
-                    TxtCPF.Focus();
-
-                    if (GlobalData.MyDictionary.ContainsKey("idUsuarioUPD"))
-                        GlobalData.MyDictionary["idUsuarioUPD"] = "";                  
+                    GlobalData.MyDictionary["idUsuarioUPD"] = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao atualizar no DB - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw ex;
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Erro ao buscar CPF - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw ex;
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = Conexao;
+                        cmd.CommandText = "INSERT INTO tb_cadastro VALUES (@CPF, @NOME)";
+
+                        cmd.Parameters.AddWithValue("@CPF", TxtCPF.Text);
+                        cmd.Parameters.AddWithValue("@NOME", TxtNome.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Dados gravados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao salvar no DB - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw ex;
+                }
             }
+
+            LimparCampos();
         }
 
         private void TxtCPF_Leave(object sender, EventArgs e)
@@ -125,14 +108,61 @@ namespace CadastroDSM_CSHARP
                     {
                         TxtNome.Text = reader.GetValue(2).ToString();
                         GlobalData.MyDictionary["idUsuarioUPD"] = reader.GetValue(0).ToString();
-                        reader.Close();
+                        GlobalData.MyDictionary["isUpdate"] = true;
                     }
+                    else
+                    {
+                        GlobalData.MyDictionary["isUpdate"] = false;
+                    }
+
+                    reader.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao buscar CPF - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw ex;
+            }
+        }
+
+        private void BtnDeletar_Click(object sender, EventArgs e)
+        {
+            if (TxtCPF.Text == "   .   .   -")
+            {
+                MessageBox.Show($"Digite um CPF", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtCPF.Focus();
+                return;
+            }
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = Conexao;
+                cmd.CommandText = "SELECT TOP(1) * FROM tb_cadastro WHERE cpf = @CPF";
+                cmd.Parameters.AddWithValue("@CPF", TxtCPF.Text);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (!(reader.Read()))
+                {
+                    MessageBox.Show($"CPF não encontrando no DB", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtCPF.Clear();
+                    TxtCPF.Focus();
+                    reader.Close();
+                    return;
+                }
+                else
+                {
+                    string id = reader.GetValue(0).ToString();
+                    reader.Close();
+
+                    cmd.CommandText = "DELETE FROM tb_cadastro WHERE id_user = @ID";
+
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Dados excluídos com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    reader.Close();
+                    LimparCampos();
+                }
             }
         }
     }

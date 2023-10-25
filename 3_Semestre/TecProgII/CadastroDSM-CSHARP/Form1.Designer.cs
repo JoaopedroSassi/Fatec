@@ -118,6 +118,7 @@
             this.BtnDeletar.Size = new System.Drawing.Size(23, 22);
             this.BtnDeletar.Text = "toolStripButton4";
             this.BtnDeletar.ToolTipText = "Deletar";
+            this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // Form1
             // 
