@@ -1,0 +1,7 @@
+CREATE DATABASE CadastroGamesTecProgII;
+
+CREATE TABLE tb_games (
+    GameID INT PRIMARY KEY NOT NULL,
+    Nome VARCHAR(200) NOT NULL,
+    DataLancamento DATETIME NOT NULL
+);
