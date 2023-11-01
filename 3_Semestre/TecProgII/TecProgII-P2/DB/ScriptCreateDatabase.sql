@@ -8,3 +8,5 @@ CREATE TABLE tb_users (
     user_role VARCHAR(50), 
     user_active BIT
 );
+
+INSERT INTO tb_users VALUES ('administrador', 'admin@admin.com', '$2a$12$w2.rjloPc0F4B/U0BqOG9OAVebjMHsKJv3g0hj9Lf5OBgDpQ9yGAy', 'admin', 1);

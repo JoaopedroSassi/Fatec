@@ -1,0 +1,6 @@
+Por utilizar criptografia de senha, é necessário usar o Insert disponível no arquivo ScriptCreateDatabase.SQL
+
+Após rodar o insert, logar com:
+
+admin@admin.com
+admin
