@@ -1,32 +1,77 @@
 ﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
+using TecProgII_P2.Utils;
 
 namespace TecProgII_P2
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Conexao.Connect();
+        }
+
+        private void LimpaCampos()
+        {
+            TxtEmail.Text = string.Empty;
+            TxtSenha.Text = string.Empty;
+            TxtEmail.Focus();
+        }
+
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            if (TxtEmail.Text.ToUpper() == "ADMIN" && TxtSenha.Text.ToUpper() == "ADMIN")
+            try
             {
-                Hide();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = Conexao.Connection;
+                    cmd.CommandText = "SELECT * FROM tb_users WHERE user_email = @EMAIL";
 
-                Crud crud = new Crud();
-                crud.ShowDialog();
+                    cmd.Parameters.AddWithValue("@EMAIL", TxtEmail.Text);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                Close();
+                    if (!(reader.Read()))
+                    {
+                        reader.Close();
+                        throw new Exception("Usuário não encontrado!");                   
+                    }                      
+                    else
+                    {
+                        if (!(PasswordExtensions.ComparePassword(TxtSenha.Text, reader.GetValue(3).ToString())))
+                        {
+                            reader.Close();
+                            throw new Exception("Senha inválida!");
+                        }                           
+                        else
+                        {
+                            GlobalData.MyDictionary["role"] = reader.GetValue(4).ToString();
+                            reader.Close();
+
+                            MessageBox.Show("Login realizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Hide();
+
+                            Crud crud = new Crud();
+                            crud.ShowDialog();
+
+                            Close();
+                        }
+                    }                   
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("ERRO - Login inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtEmail.Text = string.Empty;
-                TxtSenha.Text = string.Empty;
-                TxtEmail.Focus();
+                LimpaCampos();
+                MessageBox.Show($"Erro ao logar - {ex.Message}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
