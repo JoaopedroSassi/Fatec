@@ -13,7 +13,7 @@ namespace TecProgII_P2.Utils
         {
             try
             {
-                Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Fatec"].ConnectionString);
+                Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Local"].ConnectionString);
                 Connection.Open();
             }
             catch (Exception ex)

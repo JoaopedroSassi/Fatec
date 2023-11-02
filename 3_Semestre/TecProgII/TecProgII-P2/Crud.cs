@@ -210,5 +210,47 @@ namespace TecProgII_P2
                 CarregarDados();
             }
         }
+
+        private void DgvDados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == Ativo.Index)
+                {
+                    if (e.RowIndex >= 0)
+                    {
+                        DialogResult result = MessageBox.Show("Deseja alterar o status deste usuário?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            string valueAtivo = DgvDados.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                            bool ativo = true;
+                            if (valueAtivo.ToLower() == "true")
+                                ativo = false;
+
+                            string id = DgvDados.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                            using (SqlCommand cmd = new SqlCommand())
+                            {
+                                cmd.Connection = Conexao.Connection;
+                                cmd.CommandText = "UPDATE tb_users SET user_active = @ATIVO WHERE id_user = @ID";
+
+                                cmd.Parameters.AddWithValue("@ID", id);
+                                cmd.Parameters.AddWithValue("@ATIVO", ativo);
+                                
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Status atualizados com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CarregarDados();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao alterar status do usuário - {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }   
+        }
     }
 }

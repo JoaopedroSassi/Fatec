@@ -35,6 +35,7 @@
             this.BtnSalvar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BtnDeletar = new System.Windows.Forms.Button();
             this.CmbCargo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtSenha = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnDeletar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -134,6 +134,17 @@
             this.tabPage1.Text = "Crud";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // BtnDeletar
+            // 
+            this.BtnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeletar.Location = new System.Drawing.Point(529, 273);
+            this.BtnDeletar.Name = "BtnDeletar";
+            this.BtnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.BtnDeletar.TabIndex = 16;
+            this.BtnDeletar.Text = "Deletar";
+            this.BtnDeletar.UseVisualStyleBackColor = true;
+            this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
+            // 
             // CmbCargo
             // 
             this.CmbCargo.FormattingEnabled = true;
@@ -209,6 +220,7 @@
             this.DgvDados.ReadOnly = true;
             this.DgvDados.Size = new System.Drawing.Size(614, 301);
             this.DgvDados.TabIndex = 0;
+            this.DgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDados_CellClick);
             // 
             // ID
             // 
@@ -239,17 +251,6 @@
             this.Ativo.HeaderText = "Ativo";
             this.Ativo.Name = "Ativo";
             this.Ativo.ReadOnly = true;
-            // 
-            // BtnDeletar
-            // 
-            this.BtnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeletar.Location = new System.Drawing.Point(529, 273);
-            this.BtnDeletar.Name = "BtnDeletar";
-            this.BtnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.BtnDeletar.TabIndex = 16;
-            this.BtnDeletar.Text = "Deletar";
-            this.BtnDeletar.UseVisualStyleBackColor = true;
-            this.BtnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // Crud
             // 

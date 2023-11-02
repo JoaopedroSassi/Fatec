@@ -50,7 +50,12 @@ namespace TecProgII_P2
                         {
                             reader.Close();
                             throw new Exception("Senha inválida!");
-                        }                           
+                        }
+                        else if (reader.GetValue(5).ToString().ToLower() == "false")
+                        {
+                            reader.Close();
+                            throw new Exception("Usuário inátivo!");
+                        }
                         else
                         {
                             GlobalData.MyDictionary["role"] = reader.GetValue(4).ToString();
