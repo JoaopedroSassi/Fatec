@@ -27,6 +27,21 @@ FatecSCS/3_Semestre/SOI
 2_Semestre/MatComp/Ativ09
 !3_Semestre/TecProgII/PJ_TecProgII/bin/Debug/Fotos
 !3_Semestre/TecProgII/PJ_TecProgII/bin/Debug/Icones
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualbasic,visualstudio,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualbasic,visualstudio,windows
